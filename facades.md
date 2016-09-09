@@ -39,6 +39,7 @@ One of the primary benefits of dependency injection is the ability to swap imple
 
 Typically, it would not be possible to mock or stub a truly static class method. However, since facades use dynamic methods to proxy method calls to objects resolved from the service container, we actually can test facades just as we would test an injected class instance. For example, given the following route:
 
+    use Illuminate\Support\Facades\Route;
     use Illuminate\Support\Facades\Cache;
 
     Route::get('/cache', function () {
